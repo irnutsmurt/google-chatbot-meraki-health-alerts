@@ -1,14 +1,14 @@
 [Unit]
-Description=Meraki Alerts Service
+Description=Meraki Alerts to Google Chat
 After=network.target
 
 [Service]
 Type=simple
 User=<your-user>
-WorkingDirectory=/opt/merakialerts
-ExecStart=/usr/bin/python3 /opt/merakialerts/main.py
+WorkingDirectory=<your-working-dir>
+ExecStart=<your-script-path>
 Restart=on-failure
-RestartSec=5
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
