@@ -1,7 +1,7 @@
 # Google Workspace Chatbot Meraki Health Alerts
 Bot to pull down alerts from Meraki network devices using the meraki api to send to google workspace chat using Spaces Webhooks
 
-Run the bash script install_meraki_alerts.sh to be ran through the steps to automatically install this script. You will need your meraki api key, your networkid, and your googlechat webhook url.
+Run the bash script meraki_google_chatbot_ installer.sh to be ran through the steps to automatically install this script. You will need your meraki api key, your networkid, and your googlechat webhook url. To find these, follow steps 2 - 5 of the manual install.
 
 To manually install this bot follow, these steps
 1. git clone repository (recommend placing in /opt/merakialerts)
