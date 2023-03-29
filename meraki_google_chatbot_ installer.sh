@@ -24,6 +24,17 @@ if [[ ! $current_dir =~ ^/home ]]; then
     sudo chown -R $username:$username $current_dir
 fi
 
+# Check if all the required files are present
+if [[ -f "main.py" && -f "googlechat.py" && -f "meraki.py" && -f "config.ini" && -f "requirements.txt" ]]; then
+    echo "All required files are present."
+else
+    echo "Some required files are missing. Please make sure main.py, googlechat.py, meraki.py, config.ini, and requirements.txt are in the current directory."
+    exit 1
+fi
+
+# Install the required Python packages
+pip3 install -r requirements.txt
+
 # Copy the systemd service file to the proper location
 sudo cp meraki-alerts.service /etc/systemd/system/meraki-alerts.service
 
