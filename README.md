@@ -20,11 +20,15 @@ curl -L --request GET \
 --header 'X-Cisco-Meraki-API-Key: api key here'
 
 6. Take your api key, your network id, and your google chat webhook url and place in the config.ini file in the approriate field. Please note, the webhook url will contain near the end a %. The script requires that you add an extra % to it. For example if the webhook url looks like this
+```
 https://chat.googleapis.com/v1/spaces/ABCDEonasRZyh/messages?key==AAAAAAAAAAABBBBBBCCCCC-DDDDDDEEEEEEEFFFFtoken=11GGGGGGGGGGHHHH34I-1IIIIIIIKKKKKKKLLL-MMM%3D
+```
+
 It should look like this in the config.ini
+```
 [google_chat]
 https://chat.googleapis.com/v1/spaces/ABCDEonasRZyh/messages?key==AAAAAAAAAAABBBBBBCCCCC-DDDDDDEEEEEEEFFFFtoken=11GGGGGGGGGGHHHH34I-1IIIIIIIKKKKKKKLLL-MMM%%3D
-
+```
 7. run pip install requirements.txt to install dependencies
 
 Edit the systemd service with what username you'll be using, what is the working directory the script is placed in, and replace the /opt/merakialerts/main.py to the file location of your script
