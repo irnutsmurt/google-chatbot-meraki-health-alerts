@@ -13,12 +13,13 @@ To manually install this bot follow, these steps
 4. Get your Meraki organization ID. If you don't know this, login to your meraki web portal and then follow this link https://dashboard.meraki.com/api/v0/organizations
 
 5. You'll need your network id next for your network that you want to monitor. Run this curl command replacing the org id and your api key you generated
+```
 curl -L --request GET \
 --url https://api.meraki.com/api/v0/organizations/orgid here/networks \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'X-Cisco-Meraki-API-Key: api key here'
-
+```
 6. Take your api key, your network id, and your google chat webhook url and place in the config.ini file in the approriate field. Please note, the webhook url will contain near the end a %. The script requires that you add an extra % to it. For example if the webhook url looks like this
 ```
 https://chat.googleapis.com/v1/spaces/ABCDEonasRZyh/messages?key==AAAAAAAAAAABBBBBBCCCCC-DDDDDDEEEEEEEFFFFtoken=11GGGGGGGGGGHHHH34I-1IIIIIIIKKKKKKKLLL-MMM%3D
